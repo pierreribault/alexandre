@@ -14,10 +14,9 @@ const config = {
 	kit: {
 		adapter: adapter({
 			// default options are shown
-			pages: 'docs',
-			assets: 'docs'
+			pages: 'build',
+			assets: 'build'
 		}),
-		trailingSlash: 'always',
 
 		paths: {
 			base: '/alexandre'
