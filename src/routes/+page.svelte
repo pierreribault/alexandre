@@ -34,6 +34,17 @@
 		['/stacks/adobe_indesign.svg', 'Adobe Indesign'],
 		['/stacks/adobe_xd.svg', 'Adobe XD']
 	];
+
+	const projects = [
+		['/projects/geebl.png', 'Geebl'],
+		['/projects/r.png', 'R'],
+		['/projects/duotime.png', 'Duotime'],
+		['/projects/wyloo.png', 'Wyloo'],
+		['/projects/stiud.png', 'Geebl'],
+		['/projects/dropee.png', 'Dropee'],
+		['/projects/davidovich.png', 'Davidovich'],
+		['/projects/alunison.png', 'Alunison']
+	];
 </script>
 
 <section class="xl:flex xl:flex-row-reverse">
@@ -131,29 +142,9 @@
 	<h1 class="text-2xl font-bold md:text-4xl lg:text-5xl">Mes projets</h1>
 	<Separator class="mt-2 mb-4 mx-auto w-16 md:mt-3 md:mb-12 md:w-24 lg:mt-4 lg:mb-24 lg:w-32" />
 	<div class="flex flex-col md:grid md:grid-cols-2 md:gap-5 xl:grid-cols-3">
-		<img id="geebl" src="{base}/projects/geebl.png" alt="Geebl" class="py-2 md:py-0 md:w-full" />
-		<img id="r" src="{base}/projects/r.png" alt="R" class="py-2 md:py-0 md:w-full" />
-		<img
-			id="duotime"
-			src="{base}/projects/duotime.png"
-			alt="Duotime"
-			class="py-2 md:py-0 md:w-full"
-		/>
-		<img id="wyloo" src="{base}/projects/wyloo.png" alt="Wyloo" class="py-2 md:py-0 md:w-full" />
-		<img id="geebl" src="{base}/projects/stiud.png" alt="Geebl" class="py-2 md:py-0 md:w-full" />
-		<img id="dropee" src="{base}/projects/dropee.png" alt="Dropee" class="py-2 md:py-0 md:w-full" />
-		<img
-			id="davidovich"
-			src="{base}/projects/davidovich.png"
-			alt="Davidovich"
-			class="py-2 md:py-0 md:w-full"
-		/>
-		<img
-			id="alunison"
-			src="{base}/projects/alunison.png"
-			alt="Alunison"
-			class="py-2 md:py-0 md:w-full"
-		/>
+		{#each projects as [src, alt]}
+			<img id="geebl" src={base + src} {alt} class="py-2 md:py-0 md:w-full" draggable="false" />
+		{/each}
 	</div>
 </section>
 <section id="contact" class="mt-10 pt-10 md:mt-20 md:pt-20 lg:mt-32 lg:pt-32 text-center">
